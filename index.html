@@ -98,7 +98,21 @@
       document.getElementById("bonjour").innerText =
         "Bonjour " + prenom + " 👋";
     }
+function choisirPrix(prix) {
+  document.getElementById("prixChoisi").innerText =
+    "Montant choisi : " + prix + " €";
+}
 
+function commander() {
+  const prix = document.getElementById("prixChoisi").innerText;
+
+  if (!prix) {
+    alert("Choisis d'abord un montant.");
+    return;
+  }
+
+  alert("Commande : " + prix);
+}
     // Action du bouton
 window.bonjour = function() {
 
